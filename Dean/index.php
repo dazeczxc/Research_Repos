@@ -22,7 +22,7 @@ $time = date("h:i a");
 
  
  
-$queryStudent = "SELECT * FROM student WHERE student_status = 'Confirmed'";
+$queryStudent = "SELECT * FROM student WHERE student_status = 'Confirmed' && student_department = $dept_id";
 $statementqueryStudent = $connect->prepare($queryStudent);
 $statementqueryStudent->execute();
 $total_dataS = $statementqueryStudent->rowCount();
